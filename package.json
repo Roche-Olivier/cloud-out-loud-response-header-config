@@ -1,0 +1,21 @@
+{
+  "name": "cloud-out-loud-reponse-header-config",
+  "version": "1.0.0",
+  "description": "Build up the response header configs with helmet as security control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "helmet",
+    "response headers",
+    "access",
+    "security"
+  ],
+  "author": "Roche OLivier",
+  "license": "MIT",
+  "dependencies": {
+    "helmet": "^7.1.0"
+  }
+}
