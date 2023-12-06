@@ -10,12 +10,21 @@ First draft
 The documentation & FAQ can be found at [Documentation and frequently asked questions (FAQ)](https://cloudoutloud.net/#/cloud-out-loud-response-header-config)  
 
 ## TL:DR
-- Add the following values to your server.js / index.js etc ( whatever your main server js file is. )
+- Add the following process.env values to your server.js
 - This can also be put into k8s secrets or configuration files to abstract the configs from the code base
-- **process.env.BASE_SERVER_URL** *: This is the base seever for the current application*
+- **process.env.BASE_SERVER_URL** *: This is the base server for the current application*
 - **process.env.API_URL_HELMET_PATH** *:  This is the server where your API resides BFF ( back end for front end - to call all the other API's)*
-- **process.env.UI_PACKAGE_PROVIDER_PATH** *: This is the ui provider path fro the front end libraries eg. 'https://cdnjs.cloudflare.com'
+- **process.env.UI_PACKAGE_PROVIDER_PATH** *: This is the ui provider path for the front end libraries eg. 'https://cdnjs.cloudflare.com'
 
+- Below is an example of the values in the server.js: 
+```
+process.env.BASE_SERVER_URL = "http://localhost:3000"
+process.env.API_URL_HELMET_PATH = "http://localhost:3001"
+process.env.UI_PACKAGE_PROVIDER_PATH = "https://cdnjs.cloudflare.com"
+
+const _response_headers_config = require('cloud-out-loud-reponse-header-config')
+_response_headers_config.response_headers.init(app);
+```
 
 ## Source code
 The source can be found at [Github](https://github.com/Roche-Olivier/cloud-out-loud-response-header-config)  

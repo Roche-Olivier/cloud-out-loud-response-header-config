@@ -1,6 +1,6 @@
 {
   "name": "cloud-out-loud-reponse-header-config",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Build up the response header configs with helmet as security control",
   "main": "index.js",
   "scripts": {
