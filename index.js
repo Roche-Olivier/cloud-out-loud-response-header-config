@@ -7,8 +7,8 @@ exports.response_headers = {
                 useDefaults: true,
                 directives: {
                     "default-src": ["'self'", process.env.BASE_SERVER_URL,process.env.API_URL_HELMET_PATH],
-                    "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://cdnjs.cloudflare.com"],
-                    "style-src": ["'self'", "'unsafe-inline'", "https://cdnjs.cloudflare.com"],
+                    "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'", process.env.UI_PACKAGE_PROVIDER_PATH],
+                    "style-src": ["'self'", "'unsafe-inline'",  process.env.UI_PACKAGE_PROVIDER_PATH],
                     "script-src-attr": ["'self'", "'unsafe-inline'"]
                 },
             }),

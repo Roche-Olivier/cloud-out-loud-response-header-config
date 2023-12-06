@@ -9,6 +9,14 @@ First draft
 ## Documentation & FAQ
 The documentation & FAQ can be found at [Documentation and frequently asked questions (FAQ)](https://cloudoutloud.net/#/cloud-out-loud-response-header-config)  
 
+## TL:DR
+- Add the following values to your server.js / index.js etc ( whatever your main server js file is. )
+- This can also be put into k8s secrets or configuration files to abstract the configs from the code base
+- **process.env.BASE_SERVER_URL** *: This is the base seever for the current application*
+- **process.env.API_URL_HELMET_PATH** *:  This is the server where your API resides BFF ( back end for front end - to call all the other API's)*
+- **process.env.UI_PACKAGE_PROVIDER_PATH** *: This is the ui provider path fro the front end libraries eg. 'https://cdnjs.cloudflare.com'
+
+
 ## Source code
 The source can be found at [Github](https://github.com/Roche-Olivier/cloud-out-loud-response-header-config)  
 
